@@ -12,11 +12,14 @@ module.exports = {
       },
       colors: {
         brand: {
-          main: "#01B3F1",
-          light: "#E6F7FF",
-          dark: "#0077A9",
+          // main: "#01B3F1",
+          // light: "#E6F7FF",
+          // dark: "#0077A9",
+          main: "#FF5733",
+          light: "#FFECE6",
+          dark: "#8C1C00"
         },
-        text :{
+        text: {
           dark: "#212529",
           light: "#666"
         }

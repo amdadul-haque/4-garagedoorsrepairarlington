@@ -25,6 +25,14 @@ const Navbar = () => {
     };
   }, []);
 
+  const navItmes = [
+    { name: "Home", link: "#home" },
+    { name: "Overview", link: "#overview" },
+    { name: "Repair", link: "#repair" },
+    { name: "Service", link: "#service" },
+    { name: "Installation", link: "#installation" },
+    { name: "Opener", link: "#opener" },
+  ];
 
 
   return (
@@ -44,15 +52,13 @@ const Navbar = () => {
         </div>
         <ul
           className={`bg-white ${isMobileMenuOpen ? 'flex flex-col gap-4' : 'hidden'} flex-col absolute px-4 py-2 top-[80px] left-0 right-0 w-[90%] md:w-auto mx-auto md:mx-0 md:top-0 text-text-dark md:flex md:flex-row justify-end md:items-centern gap-2 md:gap-6 md:relative`}
-          
-        >
-          <li><a href="#home" className="text-base font-medium hover:text-brand-main transition-all duration-300">Home</a></li>
-          <li><a href="#overview" className="text-base font-medium hover:text-brand-main transition-all duration-300">Overview</a></li>
-          <li><a href="#installandrepair" className="text-base font-medium hover:text-brand-main transition-all duration-300">Install</a></li>
-          <li><a href="#features" className="text-base font-medium hover:text-brand-main transition-all duration-300">Features</a></li>
-          <li><a href="#colors" className="text-base font-medium hover:text-brand-main transition-all duration-300">Colors</a></li>
-          <li><a href="#warranty" className="text-base font-medium hover:text-brand-main transition-all duration-300">Warranty</a></li>
 
+        >
+          {navItmes.map((item, index) => (
+            <li key={index}>
+              <a href={item.link} className="text-base font-medium hover:text-brand-main transition-all duration-300 border-b-2 pb-2 border-transparent hover:border-brand-main">{item.name}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav >

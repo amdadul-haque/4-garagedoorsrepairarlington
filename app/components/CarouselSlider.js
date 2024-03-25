@@ -6,21 +6,27 @@ import Link from 'next/link';
 
 const CarouselSlider = () => {
   const images = [
-    '/images/slider/install.jpg',
-    '/images/slider/2.jpeg',
-    '/images/slider/3.jpeg',
-    '/images/slider/4.jpg',
-    '/images/slider/5.jpeg',
-    '/images/slider/6.jpeg',
+    // '/images/slider/2.jpg',
+    // '/images/slider/3.jpg',
+    {
+      src: '/images/slider/2.jpg',
+      alt: 'Slide 1',
+      link: 'https://veterangaragedoor.com/our-service-area/garage-door-repair-arlington-tx/',
+    },
+    // {
+    //   src: '/images/slider/1.jpg',
+    //   alt: 'Slide 1',
+    //   link: 'https://veterangaragedoor.com/our-service-area/garage-door-repair-arlington-tx/',
+    // },
+    {
+      src: '/images/slider/3.jpg',
+      alt: 'Slide 2',
+      link: 'https://veterangaragedoor.com/garage-door-repair-grand-prairie-tx/',
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
-
-  // const firstImg = document.getElementById('firstImg');
-  // firstImg.onload = () => {
-  //   setLoading(false);
-  // }
 
   const handlePrev = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
@@ -42,24 +48,25 @@ const CarouselSlider = () => {
         </div>
       )}
 
-      {currentIndex === 0 ? (
-        <Link href="https://veterangaragedoor.com/garage-doors/" target="_blank" passHref>
+      {/* {currentIndex === 0 ? ( */}
+        <Link href={images[currentIndex].link} target="_blank" passHref>
           <img
-            src={images[currentIndex]}
+            src={images[currentIndex].src}
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-[300px] sm:h-[500px] md:h-[600px] xl:min-h-[80vh] xl:max-h-[80vh]"
             onLoad={() => setLoading(false)} // Hide loading overlay when image loaded
-            // id='firstImg'
           />
         </Link>
-      ) : (
+      {/* ) : (
         <img
-          src={images[currentIndex]}
+          src={images[currentIndex].src}
           alt={`Slide ${currentIndex + 1}`}
           className="w-full h-[300px] sm:h-[500px] md:h-[600px] xl:min-h-[80vh] xl:max-h-[80vh]"
           onLoad={() => setLoading(false)} // Hide loading overlay when image loaded
         />
-      )}
+      )} */}
+
+
 
       <div className="flex items-center justify-center">
         <FaChevronLeft
