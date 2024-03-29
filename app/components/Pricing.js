@@ -163,7 +163,7 @@ const tableHead = [
 
 const Pricing = () => {
   return (
-    <div className="my-20 mb-28 ">
+    <div id='pricing' className="py-20 pb-28 ">
       <SectionTitle title="Price Range for Garage Door Service in the City of Arlington Texas" />
       <div className='w-full overflow-x-scroll lg:overflow-hidden'>
         <table className="border-collapse border border-gray-400 mx-auto"
@@ -192,6 +192,10 @@ const Pricing = () => {
             ))}
           </tbody>
         </table >
+      </div>
+
+      <div className='px-4 mt-10'>
+        <img src="./images/map.png" alt="map" className='w-full' />
       </div>
 
     </div>

@@ -27,10 +27,11 @@ const Navbar = () => {
 
   const navItmes = [
     { name: "Home", link: "#home" },
-    { name: "Overview", link: "#overview" },
     { name: "Repair", link: "#repair" },
     { name: "Service", link: "#service" },
+    { name: "Pricing", link: "#pricing" },
     { name: "Installation", link: "#installation" },
+    { name: "Springs", link: "#springs" },
     { name: "Opener", link: "#opener" },
   ];
 
