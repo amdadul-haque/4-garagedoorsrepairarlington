@@ -15,17 +15,17 @@ const Repair = () => {
       title: "Emergency Garage Systems and Door Repair",
       description: "From simple repairs to garage door panel repairs and torsion springs we offer every type of repair and maintenance imaginable with regard to garage doors. One key feature of our company is our emergency garage systems and door repairs. We are always able to dispatch a technician to your home regardless of the time of day to ensure that when an emergency arises that you will have a technician who can service your garage door immediately. Getting stranded outside of your home when your garage door fails is not an enjoyable experience, and that is why our technicians are always ready to assist our customers in emergency situations."
     }
-];
+  ];
 
 
   return (
     <div className="py-16 pt-20" id='repair'>
       <SectionTitle title="Repair" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {sections.map((section, index) => (
-          <div key={index} className="border border-gray-200 p-6 rounded-lg shadow-md">
+          <div key={index} className={`border border-gray-200 py-5 px-5 rounded-lg shadow-md ${index == 2 && 'md:col-span-2 lg:w-1/2 lg:mx-auto xl:w-full xl:col-span-1'}`}>
             <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
-            <p className="text-text-gray line-clamp-6 hover:line-clamp-none">{section.description}</p>
+            <p className="text-text-gray ">{section.description}</p>
           </div>
         ))}
       </div>

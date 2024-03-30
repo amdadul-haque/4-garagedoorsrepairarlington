@@ -22,9 +22,9 @@ const Opener = () => {
       <SectionTitle
         title='Opener'
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-8">
         {openerData.map((opener, index) => (
-          <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div key={index} className={`bg-gray-100 p-6 rounded-lg shadow-md ${index == 2 && 'md:col-span-2 lg:w-1/2 lg:mx-auto xl:w-full xl:col-span-1'}`}>
             <h2 className="text-xl font-semibold mb-4">{opener.title}</h2>
             <p className="text-gray-700">{opener.description}</p>
           </div>

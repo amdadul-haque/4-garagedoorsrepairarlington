@@ -21,9 +21,9 @@ const Installation = () => {
   return (
     <div className='py-16 pt-20' id='installation'>
       <SectionTitle title="Installation" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {installationData.map((item, index) => (
-          <div key={index} className="flex items-center bg-gray-50 p-4 py-6 rounded-md shadow-md">
+          <div key={index} className={`flex items-center bg-gray-50 p-4 py-6 rounded-md shadow-md ${index == 2 && 'md:col-span-2 lg:w-1/2 lg:mx-auto xl:w-full xl:col-span-1'}`}>
             <div>
               <h3 className="text-xl text-text-dark font-semibold">{item.title}</h3>
               <p className="text-text-light mt-4">{item.description}</p>

@@ -28,9 +28,9 @@ const Spring = () => {
       <SectionTitle
         title='Springs'
       />
-      <div className='grid gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
+      <div className='grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
         {springData.map((item, index) => (
-          <div key={index} className='flex flex-col items-center border hover:border-brand-main px-4 py-6 gap-6 hover:shadow-lg  hover:scale-105 transition-all duration-300'>
+          <div key={index} className={`flex flex-col items-center border hover:border-brand-main px-4 py-6 gap-6 hover:shadow-lg  hover:scale-105 transition-all duration-300 ${index == 2 && 'md:col-span-2 lg:w-1/2 lg:mx-auto xl:w-full xl:col-span-1'}`}>
             <item.icon className='text-[40px] text-brand-main' />
             <h4 className='text-center text-text-dark font-semibold text-2xl'>{item.title}</h4>
             <p className='text-center text-text-light'>{item.description}</p>
