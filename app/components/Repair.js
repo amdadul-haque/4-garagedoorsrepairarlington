@@ -21,13 +21,18 @@ const Repair = () => {
   return (
     <div className="py-16 pt-20" id='repair'>
       <SectionTitle title="Repair" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {sections.map((section, index) => (
-          <div key={index} className={`border border-gray-200 py-5 px-5 rounded-lg shadow-md ${index == 2 && 'md:col-span-2 lg:w-1/2 lg:mx-auto xl:w-full xl:col-span-1'}`}>
+          <div key={index} className={`border border-gray-200 py-5 px-5 rounded-lg shadow-md`}>
             <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
             <p className="text-text-gray ">{section.description}</p>
           </div>
         ))}
+        <div>
+          <a href="https://veterangaragedoor.com/garage-door-repair-grand-prairie-tx/" target='_blank'>
+            <img src="./images/slider/3.jpg" alt="slider" />
+          </a>
+        </div>
       </div>
     </div>
   );

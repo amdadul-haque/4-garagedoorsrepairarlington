@@ -6,23 +6,16 @@ import Link from 'next/link';
 
 const CarouselSlider = () => {
   const images = [
-    // '/images/slider/2.jpg',
-    // '/images/slider/3.jpg',
     {
       src: '/images/slider/2.jpg',
       alt: 'Slide 1',
       link: 'https://veterangaragedoor.com/our-service-area/garage-door-repair-arlington-tx/',
     },
     // {
-    //   src: '/images/slider/1.jpg',
-    //   alt: 'Slide 1',
-    //   link: 'https://veterangaragedoor.com/our-service-area/garage-door-repair-arlington-tx/',
+    //   src: '/images/slider/3.jpg',
+    //   alt: 'Slide 2',
+    //   link: 'https://veterangaragedoor.com/garage-door-repair-grand-prairie-tx/',
     // },
-    {
-      src: '/images/slider/3.jpg',
-      alt: 'Slide 2',
-      link: 'https://veterangaragedoor.com/garage-door-repair-grand-prairie-tx/',
-    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,7 +61,7 @@ const CarouselSlider = () => {
 
 
 
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <FaChevronLeft
           className="absolute left-0 top-1/2 transform -translate-y-[50px] cursor-pointer text-white text-4xl z-10"
           onClick={handlePrev}
@@ -88,7 +81,7 @@ const CarouselSlider = () => {
             onClick={() => setCurrentIndex(index)}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

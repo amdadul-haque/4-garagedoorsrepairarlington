@@ -43,8 +43,7 @@ const Navbar = () => {
 
       <div className="max-w-screen-xl mx-auto flex items-center justify-between w-full navBar">
         <a href="/" className="z-10 flex h-full items-center">
-          <img src="/images/logo.png" alt="logo" className="h-[40px] xl:h-[50px] ml-2 my-2" /></a>
-
+          <img src="/images/logo.png" alt="logo" className="w-[280px] sm:w-auto h-[40px] xl:h-[50px] ml-2 my-2" /></a>
         <div
           className="md:hidden cursor-pointer z-10 mr-2"
           onClick={toggleMobileMenu}
